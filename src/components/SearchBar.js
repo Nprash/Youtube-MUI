@@ -7,9 +7,21 @@ import {Search} from "@mui/icons-material"
 
 
 const SearchBar = () => {
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate()
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if(searchTerm){
+      navigate(`/search/${searchTerm}`) // if searchTerm exist then navigate to this url this url defined in SearchFeed component in fetch method
+      setSearchTerm('') //to reset after navigating to ascertianed url which is mapped to SearchFeed component
+    }
+  }
+
   return (
-    <Paper component="form" onSubmit={()=>{}} sx={{borderRadius:20, border:"1px solid #e3e3e3", pl:2, boxShadow:"none", mr:{sm:5}}}>
-        <input className='search-bar' placeholder='search...' value="" onChange={()=>{}} />
+    <Paper component="form" onSubmit={handleSubmit} sx={{borderRadius:20, border:"1px solid #e3e3e3", pl:2, boxShadow:"none", mr:{sm:5}}}>
+        <input className='search-bar' placeholder='search...' value={searchTerm} onChange={(e)=>setSearchTerm(e.target.value)} />
         <IconButton type='"submit' sx={{p:"10px",color:"red", }}>
             <Search />
         </IconButton>

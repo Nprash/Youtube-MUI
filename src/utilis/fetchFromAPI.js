@@ -1,18 +1,13 @@
 import axios from "axios";
 
-// const axios = require('axios');
 
-const BASE_URL= 'https://youtube-v31.p.rapidapi.com'
+const BASE_URL="https://youtube-v311.p.rapidapi.com";
 
-const options = {
-//   method: 'GET',
-//   url: BASE_URL, this is send in async function below, now no need anymore hence commented
+const options = { 
   params: {
-    //   relatedToVideoId:"7ghhRHRP6t4",
-    //   part: 'id, snippet',
-    //   type:"video",
-    //   channelId: 'UC_x5XG1OV2P6uZZ5FSM9Ttw',
-      maxResults: '50'
+    part: 'snippet',
+    // channelId: 'UC_x5XG1OV2P6uZZ5FSM9Ttw',
+    maxResults: '50'
   },
   headers: {
     'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
@@ -20,16 +15,20 @@ const options = {
   }
 };
 
-// try {
-// 	const response = await axios.request(options);
-// 	console.log(response.data);
-// } catch (error) {
-// 	console.error(error);
-// }
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+} catch (error) {
+	// console.error(error);
+}
+
+
+
+
 
 export const fetchFromAPI = async(url)=>{
   const {data} = await axios.get(`${BASE_URL}/${url}`, options)
-  console.log(data)
+  // console.log(data)
     // const data = await response.json()
     return data;
 }
