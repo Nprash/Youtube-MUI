@@ -31,12 +31,12 @@ const VideoDetail = () => {
   const {snippet:{title, channelId, channelTitle}, statistics} = videoDetail;
   // const {viewCount, likeCount} = statistics
   return (
-    <Box minHeight="95vh">
+    <Box minHeight="100vh">
 
       <Stack direction={{xs:'column', md:'row'}}>
 
-        <Box  flex={1}>
-          <Box sx={{width:"100%", position:'sticky', top:"86px"}}>
+        <Box  flex={1} mx='30px' >
+          <Box sx={{width:"100%",position:'sticky',  top:"86px", mb:"20px"}}borderTop='1px solid gray' borderLeft='1px solid gray' borderRight="1px solid gray" borderBottom="1px solid gray" borderRadius={4} >
             <ReactPlayer  url={`https://www.youtube.com/watch?v=${id}`}  className='react-player' controls />
             <Typography color="#fff" varient="h5" fontWeight="bold" p={2}>
               {title}
@@ -64,7 +64,7 @@ const VideoDetail = () => {
           </Box>
         </Box>
 
-        <Box px={2} py={{md:1, xs:5}} justifyContent='center'alignItems="center" >
+        <Box  px={2} py={{md:2, xs:5}} mr='20px' justifyContent='center'alignItems="center" borderTop='1px solid gray' borderLeft='1px solid gray' borderRight="1px solid gray" borderBottom="1px solid gray" borderRadius={4}>
           <Videos videos={videos} direction='column'/>
         </Box>
       </Stack>
