@@ -36,7 +36,7 @@ const VideoDetail = () => {
       <Stack direction={{xs:'column', md:'row'}}>
 
         <Box  flex={1} mx='30px' >
-          <Box sx={{width:"100%",position:'sticky',  top:"86px", mb:"20px"}}borderTop='1px solid gray' borderLeft='1px solid gray' borderRight="1px solid gray" borderBottom="1px solid gray" borderRadius={4} >
+          <Box sx={{width:"100%",position:'sticky',  top:"86px", mb:"20px"}}borderTop='1px solid #3d3d3d' borderLeft='1px solid #3d3d3d' borderRight="1px solid #3d3d3d" borderBottom="1px solid #3d3d3d" borderRadius={4} >
             <ReactPlayer  url={`https://www.youtube.com/watch?v=${id}`}  className='react-player' controls />
             <Typography color="#fff" varient="h5" fontWeight="bold" p={2}>
               {title}
@@ -64,7 +64,7 @@ const VideoDetail = () => {
           </Box>
         </Box>
 
-        <Box  px={2} py={{md:2, xs:5}} mr='20px' justifyContent='center'alignItems="center" borderTop='1px solid gray' borderLeft='1px solid gray' borderRight="1px solid gray" borderBottom="1px solid gray" borderRadius={4}>
+        <Box  px={2} py={{md:2, xs:5}} mr='20px' justifyContent='center'alignItems="center" borderTop='1px solid #3d3d3d' borderLeft='1px solid #3d3d3d' borderRight="1px solid #3d3d3d" borderBottom="1px solid #3d3d3d" borderRadius={4}>
           <Videos videos={videos} direction='column'/>
         </Box>
       </Stack>
