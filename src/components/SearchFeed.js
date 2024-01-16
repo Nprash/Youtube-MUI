@@ -15,16 +15,15 @@ const SearchFeed = () => {
     fetchFromAPI(`search?part=snippet&q=${searchTerm}`)
     .then((data)=>{setVideos(data.items)})
 
-    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
-    .then((data)=>{setVideos(data.items)})
+    
 
-  },[searchTerm, selectedCategory]);
+  },[searchTerm]);
   // console.log(videos);
 
-  // useEffect(()=>{
-  //   fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
-  //   .then((data)=>{setVideos(data.items)})
-  // },[selectedCategory]);
+  useEffect(()=>{
+    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
+    .then((data)=>{setVideos(data.items)})
+  },[selectedCategory]);
   // console.log(videos);
 
   return (
