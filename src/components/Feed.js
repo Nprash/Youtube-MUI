@@ -19,7 +19,7 @@ const Feed = () => {
 
 
   return (
-    <Stack sx={{flexDirection:{sx:"column", md:"row"}}}>
+    <Stack sx={{flexDirection:{sx:"column", md:"row",  zIndex:'-10'}}} >
       
       <Box sx={{height:{sx:"auto", md:"92vh"},borderRight:"1px solid #3d3d3d", px:{sx:0, md:2} }}>
         {/* sending state to the below component */}
@@ -30,9 +30,9 @@ const Feed = () => {
       
       </Box>
 
-      <Box p={2} sx={{overflowY:"auto", height:"90vh", flex:2}} mx='6px' borderLeft='2px solid #3d3d3d' borderRight="2px solid #3d3d3d" borderBottom="2px solid #3d3d3d" borderTop="2px solid #3d3d3d" borderRadius={4}  >
+      <Box p={2} sx={{overflowY:"auto",  height:"90vh", flex:2}} mx='6px' borderLeft='2px solid #3d3d3d' borderRight="2px solid #3d3d3d" borderBottom="2px solid #3d3d3d" borderTop="2px solid #3d3d3d" borderRadius={4}  >
         <Typography variant="h5" fontWeight="bold" mb={2} sx={{color:"white"}}>{selectedCategory}
-          <span style={{color:"#F31503"}}>videos</span>
+          <span style={{color:"#F31503"}}> videos</span>
         </Typography>
 
         <Videos videos={videos} />

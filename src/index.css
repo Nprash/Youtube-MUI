@@ -1,8 +1,10 @@
 html,
 body {
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
   box-sizing: border-box;
+  background: #333;
+  border-radius: 4px;
 }
 
 a {
@@ -26,7 +28,7 @@ a {
 }
 
 .category-btn:hover {
-  background-color: #FC1503 !important;
+  background-color: #3d3d3d !important;
   color: white !important;
 }
 
@@ -49,6 +51,9 @@ a {
   margin-left: 20px;
   font-size: 18px;
   /* height: 30px; */
+  background-color: #3d3d3d !important;
+  color: aliceblue;
+
 }
 
 .category-btn{

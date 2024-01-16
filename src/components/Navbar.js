@@ -6,7 +6,7 @@ import SearchBar from './SearchBar'
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const Navbar = () => (
-  <Stack direction="row" alignItems="center" p={2} sx={{position:"sticky", background:"#333", top:0, justifyContent:"space-between"}}>
+  <Stack direction="row" alignItems="center" p={2} mb={2} zIndex={20} sx={{position:"sticky", background:"#3d3d3d", top:0, justifyContent:"space-between"}}>
     <Link to="/" style={{display:'flex', alignItems:"center"}}>
       {/* <img src={YouTubeIcon} alt="logo" height={45} /> */}
       <IconButton color="inherit" sx={{ color: 'red', width:'65px' }}>

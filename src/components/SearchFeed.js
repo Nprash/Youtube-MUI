@@ -41,7 +41,7 @@ const SearchFeed = () => {
 
     </Box>
 
-    <Box p={2} sx={{overflowY:"auto", height:"90vh", flex:2}}>
+    <Box p={2} sx={{overflowY:"auto",  height:"90vh", flex:2}} mx='6px' borderLeft='2px solid #3d3d3d' borderRight="2px solid #3d3d3d" borderBottom="2px solid #3d3d3d" borderTop="2px solid #3d3d3d" borderRadius={4}>
       <Typography variant="h5" fontWeight="semibold" mb={2} sx={{color:"white"}}>
         {/* {selectedCategory? (<span style={{color:"#F31503"}}>{selectedCategory}</span>+ "videos") :!selectedCategory && searchTerm ?("Search Results for :"+<span style={{color:"#F31503"}}>{searchTerm}</span>+ "videos"):(null)} */}
         Search Results for :<span style={{color:"#F31503"}}>{searchTerm}</span> videos
